@@ -42,20 +42,23 @@ echo "Docs dest:     ${DOCS_DST}"
 echo "Attachments:   ${ATTACH_SRC}  (optional)"
 echo
 
-# rsync options:
-# -a archive, -v verbose, -h human, --delete to mirror deletions,
-# --prune-empty-dirs to skip empty, --copy-links to copy linked files,
-# excludes for common noise
-RSYNC_OPTS=(-avh --delete --prune-empty-dirs --copy-links \
+# rsync option sets
+RSYNC_COMMON=(-avh --prune-empty-dirs --copy-links \
   --exclude '.obsidian' --exclude '.DS_Store' --exclude 'Thumbs.db')
 
-# === Copy Public → docs/ ===
-rsync "${RSYNC_OPTS[@]}" "${PUBLIC_SRC}/" "${DOCS_DST}/"
+# 1) Content sync: delete-after, but PROTECT attachments dir so it's not touched
+RSYNC_CONTENT=("${RSYNC_COMMON[@]}" --delete-after --exclude 'assets/attachments/')
 
-# === Copy central attachments (if present) → docs/assets/attachments/ ===
+# 2) Attachments sync: delete-after inside attachments tree
+RSYNC_ATTACH=("${RSYNC_COMMON[@]}" --delete-after)
+
+# === Copy Public → docs/ (protect attachments) ===
+rsync "${RSYNC_CONTENT[@]}" "${PUBLIC_SRC}/" "${DOCS_DST}/"
+
+# === Copy central attachments → docs/assets/attachments/ ===
 if [[ -d "${ATTACH_SRC}" ]]; then
   mkdir -p "${ATTACH_DST}"
-  rsync "${RSYNC_OPTS[@]}" "${ATTACH_SRC}/" "${ATTACH_DST}/"
+  rsync "${RSYNC_ATTACH[@]}" "${ATTACH_SRC}/" "${ATTACH_DST}/"
   echo "Copied attachments to: ${ATTACH_DST}"
 else
   echo "Note: attachments folder not found at ${ATTACH_SRC} (skipping)"
@@ -63,6 +66,3 @@ fi
 
 echo
 echo "Sync complete."
-echo "Next steps:"
-echo "  mkdocs serve   # preview at http://127.0.0.1:8000"
-echo "  git add -A && git commit -m 'Sync from Obsidian' && git push"

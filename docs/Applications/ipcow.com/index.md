@@ -1,5 +1,7 @@
 # IP Cow
 
+---
+
 *What is my IP Address?*
 
 An easy-to-use one-page website to show you your internet IP address and other information.

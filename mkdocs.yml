@@ -1,7 +1,7 @@
-site_name: Michal Public [Wiki]
-site_description: Documentation for apps and scripts I have developed
-site_url: https://michalferber.me/wiki
-repo_url: https://github.com/MichalAFerber/wiki
+site_name: Public Wiki [Michal Ferber]
+site_description: Documentation for applications and scripts I have developed.
+site_url: https://michalferber.me/wiki/
+repo_url: https://github.com/MichalAFerber/
 use_directory_urls: true
 theme:
   name: material
@@ -10,25 +10,38 @@ theme:
   - navigation.tracking
   - navigation.sections
   - navigation.indexes
+  - navigation.top
   - search.suggest
   - search.highlight
   - content.code.copy
   - content.tabs.link
   - toc.integrate
+  - toc.follow
+  - header.autohide
   palette:
-  - scheme: default
-    primary: indigo
-    accent: indigo
-  logo: assets/images/logo-100.png
-  favicon: assets/images/favicon-32.png
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  icon:
+    logo: material/library-outline
 nav:
 - Welcome: index.md
+- Affiliates: Affiliates.md
 - Applications:
-  - Gsa Manager:
+  - GSA Manager:
     - GSA Manager: Applications/GSA Manager/index.md
-  - Ipcow.Com:
+  - ipcow.com:
     - IP Cow: Applications/ipcow.com/index.md
-  - Modman:
+  - ModMan:
     - ModMan: Applications/ModMan/index.md
 plugins:
 - search
@@ -42,6 +55,9 @@ markdown_extensions:
 - attr_list
 - md_in_html
 - pymdownx.details
+- pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 - pymdownx.superfences
 - pymdownx.highlight:
     anchor_linenums: true
@@ -49,9 +65,32 @@ markdown_extensions:
 - pymdownx.keys
 - pymdownx.mark
 - pymdownx.tilde
+- pymdownx.tasklist:
+    custom_checkbox: true
+    clickable_checkbox: true
+extra:
+  analytics:
+    provider: google
+    property: G-YSZHX35LMK
+  consent:
+    title: Cookie consent
+    description: >-
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+  social:
+  - icon: fontawesome/solid/envelope
+    link: mailto:michal@techguywithabeard.com
+  - icon: fontawesome/brands/github
+    link: https://github.com/MichalAFerber/
+  - icon: fontawesome/brands/x-twitter 
+    link: https://x.com/MichalAFerber
+  - icon: fontawesome/brands/youtube
+    link: https://www.youtube.com/@MichalAFerber 
 extra_javascript:
 - https://unpkg.com/mermaid@10.9.1/dist/mermaid.min.js
-- javascripts/init-mermaid.js
+- assets/js/init-mermaid.js
 extra_css: []
 extra_templates:
 - 404.html

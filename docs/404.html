@@ -1,22 +1,42 @@
 <!doctype html>
-<html>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<title>404 - Page Not found</title>
+<style>
+	/* Center content full viewport */
+	html,body { height:100%; margin:0; }
+	body {
+		display:flex;
+		align-items:center;
+		justify-content:center;
+		flex-direction:column;
+		background:#fff;
+		font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+		color:#222;
+		padding:1rem;
+		box-sizing:border-box;
+	}
+	.container { text-align:center; max-width:900px; width:100%; }
+	img.not-found {
+		max-width:90%;
+		height:auto;
+		display:block;
+		margin:0 auto 1.25rem;
+	}
+	a.home {
+		color:inherit;
+		text-decoration:underline;
+	}
+</style>
 
-<head>
-    <meta charset="utf-8">
-    <title>Not found</title>
-    <meta http-equiv="refresh" content="0; url={{ base_url }}/" />
-    <meta name="robots" content="noindex">
-    <style>
-        body {
-            font: 16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-            padding: 2rem
-        }
-    </style>
-</head>
+<div class="container" role="main" aria-labelledby="not-found-heading">
+	<!-- Visible heading for sighted users -->
+	<h1 style="margin:0 0 1rem;font-size:1.25rem;">404 - Page not found</h2>
 
-<body>
-    <h1>Page not found</h1>
-    <p>Redirecting to <a href="{{ base_url }}/">home</a>…</p>
-</body>
+	<!-- Image: uses base_url template variable so it works with your site base -->
+	<img class="not-found" src="{{ base_url }}assets/img/404.avif" alt="404 — page not found">
 
-</html>
+	<p style="margin:0.5rem 0 0;">
+		<a class="home" href="{{ base_url }}">Return to home</a>
+	</p>
+</div>

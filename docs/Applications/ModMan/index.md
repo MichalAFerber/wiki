@@ -1,4 +1,7 @@
 # ModMan
+
+---
+
 *Mod Manager for the Farming Simulator 2019 game*
 
 Windows application is written in C# that modifies XML files. Created, changed, upgraded, and maintained since April 23, 2020
@@ -9,9 +12,9 @@ Windows application is written in C# that modifies XML files. Created, changed, 
 
 *==This README was last updated on May 02, 2022==*  
 
-- [[#Installation]]
-- [[#Setting It Up]]
-- [[#Advanced Settings]]
+- [Installation](#installation)
+- [Setting It Up](#setting-it-up)
+- [Advanced Settings](#advanced-settings)
 
 Mod Manager for Farming Simulator 2019. FS19 game XML file and mod manager. Easy to use, simple interface, and only one file.
 
@@ -29,7 +32,7 @@ Then click the `Run anyway` button. You should only encounter this the first tim
 
 ![[WindowsProtected2.png]]
 
-[Back to top](#ModMan)
+[Back to top](#modman)
 
 ## Setting It Up
 
@@ -59,7 +62,7 @@ C:\Users\YourNameHere\Documents\My Games\FarmingSimulator2019\mods\
 
 ![[ModMan1.png]]
 
-[Back to top](#ModMan)
+[Back to top](#modman)
 
 ## Advanced Settings
 
@@ -85,4 +88,4 @@ This turns the logging for the game on or off and allows you to change the filen
 
 ![[ModManSelectedModFolder.png]]
 
-[Back to top](#ModMan)
+[Back to top](#modman)

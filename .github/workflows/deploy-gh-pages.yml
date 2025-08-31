@@ -35,7 +35,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install mkdocs mkdocs-material mkdocs-roamlinks-plugin pyyaml
 
-      - name: Generate nav from docs/
+      - name: Generate nav
         run: python tools/gen_nav.py
 
       - name: Build site
