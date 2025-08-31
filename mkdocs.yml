@@ -1,57 +1,57 @@
 site_name: Michal Public [Wiki]
 site_description: Documentation for apps and scripts I have developed
-site_url: https://USER.github.io/REPO/     # or custom domain
-repo_url: https://github.com/USER/REPO
+site_url: https://michalferber.me/wiki
+repo_url: https://github.com/MichalAFerber/wiki
 use_directory_urls: true
-
 theme:
   name: material
   features:
-    - navigation.instant
-    - navigation.tracking
-    - navigation.sections
-    - navigation.indexes
-    - search.suggest
-    - search.highlight
-    - content.code.copy
-    - content.tabs.link
-    - toc.integrate
+  - navigation.instant
+  - navigation.tracking
+  - navigation.sections
+  - navigation.indexes
+  - search.suggest
+  - search.highlight
+  - content.code.copy
+  - content.tabs.link
+  - toc.integrate
   palette:
-    - scheme: default
-      primary: indigo
-      accent: indigo
-  logo: assets/images/logo.svg
-  favicon: assets/images/favicon.png
-
+  - scheme: default
+    primary: indigo
+    accent: indigo
+  logo: assets/images/logo-100.png
+  favicon: assets/images/favicon-32.png
 nav:
-  - Home: index.md
-
+- Welcome: index.md
+- Applications:
+  - Gsa Manager:
+    - GSA Manager: Applications/GSA Manager/index.md
+  - Ipcow.Com:
+    - IP Cow: Applications/ipcow.com/index.md
+  - Modman:
+    - ModMan: Applications/ModMan/index.md
 plugins:
-  - search
-  - roamlinks
-
+- search
+- roamlinks
 markdown_extensions:
-  - admonition
-  - footnotes
-  - toc:
-      permalink: true
-  - tables
-  - attr_list
-  - md_in_html
-  - pymdownx.details
-  - pymdownx.superfences
-  - pymdownx.highlight:
-      anchor_linenums: true
-  - pymdownx.inlinehilite
-  - pymdownx.keys
-  - pymdownx.mark
-  - pymdownx.tilde
-
+- admonition
+- footnotes
+- toc:
+    permalink: true
+- tables
+- attr_list
+- md_in_html
+- pymdownx.details
+- pymdownx.superfences
+- pymdownx.highlight:
+    anchor_linenums: true
+- pymdownx.inlinehilite
+- pymdownx.keys
+- pymdownx.mark
+- pymdownx.tilde
 extra_javascript:
-  - https://unpkg.com/mermaid@10.9.1/dist/mermaid.min.js
-  - javascripts/init-mermaid.js
-
+- https://unpkg.com/mermaid@10.9.1/dist/mermaid.min.js
+- javascripts/init-mermaid.js
 extra_css: []
-
 extra_templates:
-  - 404.html
+- 404.html

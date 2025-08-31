@@ -33,7 +33,10 @@ jobs:
       - name: Install MkDocs + plugins
         run: |
           python -m pip install --upgrade pip
-          pip install mkdocs mkdocs-material mkdocs-roamlinks-plugin
+          pip install mkdocs mkdocs-material mkdocs-roamlinks-plugin pyyaml
+
+      - name: Generate nav from docs/
+        run: python tools/gen_nav.py
 
       - name: Build site
         run: mkdocs build --strict
