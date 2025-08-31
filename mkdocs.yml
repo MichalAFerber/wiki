@@ -25,12 +25,6 @@ theme:
 
 nav:
   - Home: index.md
-  - Apps:
-    - Overview: apps/_index.md
-    - Sample App: apps/sample-app.md
-  - Scripts:
-    - Overview: scripts/_index.md
-    - Sample Script: scripts/sample-script.md
 
 plugins:
   - search
