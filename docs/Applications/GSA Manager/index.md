@@ -1,13 +1,23 @@
 # GSA Manager
 
----
+**GSA Manager** is a Windows-based application developed for managing associations and clubs. It provides comprehensive functionality for:
 
-_an associational and club management application_
+- Membership management
+- Inventory tracking
+- Checkout handling
+- Contact management
 
-Windows application that is written in C# with an SQL Server database. It comes complete with membership, inventory, checkout, and contact management. Integrates with both Authorize.net and Braintree by PayPal for payment processing.
+It seamlessly integrates with payment processing services like **Authorize.Net** and **Braintree**, and supports various hardware peripherals including:
 
-Created, changed, upgraded, and maintained since March 19, 2007.
+- Card swipe readers
+- Cash drawers
+- Barcode scanners
+- Label and receipt printers  
 
-https://www.gsamanager.org/
+The tool is also adaptable, offering **customization options** tailored to specific use cases. It's not limited to clubs or associations—it can be effectively used by small businesses, such as bookstores or consignment shops. Demo databases are available on request.
+
+[https://www.gsamanager.org/](https://www.gsamanager.org/)
 
 ![[gsamanager.jpg]]
+
+Created, changed, upgraded, and maintained since March 19, 2007.

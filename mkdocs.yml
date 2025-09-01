@@ -35,14 +35,19 @@ theme:
     logo: material/library-outline
 nav:
 - Welcome: index.md
-- Affiliates: Affiliates.md
 - Applications:
   - GSA Manager:
     - GSA Manager: Applications/GSA Manager/index.md
-  - ipcow.com:
-    - IP Cow: Applications/ipcow.com/index.md
+  - IP Cow:
+    - IP Cow: Applications/IP Cow/index.md
+    - IPv4 & IPv6 Address Checker: Applications/IP Cow/checkip.md
+    - IPv6 Address Checker: Applications/IP Cow/checkipv6.md
   - ModMan:
     - ModMan: Applications/ModMan/index.md
+    - User Guide: Applications/ModMan/user-guide.md
+- Resources:
+  - Affiliates: Resources/affiliates.md
+  - Tool Chest: Resources/tool-chest.md
 plugins:
 - search
 - roamlinks

@@ -1,5 +1,0 @@
-# Affiliates
-
----
-
-Coming soon!
